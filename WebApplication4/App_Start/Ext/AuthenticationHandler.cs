@@ -126,7 +126,7 @@ namespace WebApplication4
                 DateTime dt;
                 if (!DateTime.TryParseExact(Timestamps.FirstOrDefault(), "yyyyMMddHHmmss", null, System.Globalization.DateTimeStyles.None, out dt))
                     return base.SendAsync(request, cancellationToken);
-                var ExpiredTime = 600; //ConfigurationManager.AppSettings["ExpiredTime"].ToString();//权限过期时间
+                var ExpiredTime = 6600; //ConfigurationManager.AppSettings["ExpiredTime"].ToString();//权限过期时间
                 if (Math.Abs((DateTime.Now - dt).TotalMinutes) > Convert.ToInt32(ExpiredTime))//前后时间相差不能超过15分钟
                     return base.SendAsync(request, cancellationToken);
                 string appid = AppIDs.FirstOrDefault();

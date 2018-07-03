@@ -21,7 +21,7 @@ namespace WebApplication4.Controllers
         public string Get(int id)
         {
             string UserInfoStr = User.Identity.Name;
-            return "value" + UserInfoStr;
+            return id.ToString()+"value" + UserInfoStr;
         }
 
         // POST api/values
