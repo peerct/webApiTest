@@ -1,0 +1,3 @@
+﻿Dapper在1.50下支持.net 4.0
+devart连接oracle必须是any cpu项目类型；且引入Devart.Data.dll和Devart.Data.Oracle.dll两个类库
+Dapper序列化配合json.net使用
